@@ -3,5 +3,4 @@
 @tailwind components;
 @tailwind utilities;
 @tailwindcss/forms;
-/* styles.css */
-@import '~bootstrap/dist/css/bootstrap.min.css';
+
