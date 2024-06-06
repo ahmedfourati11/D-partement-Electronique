@@ -8,6 +8,7 @@ import { FormationsComponent } from './formations/formations.component';
 import { SallesComponent } from './salles/salles.component';
 import { MobiliteComponent } from './mobilite/mobilite.component';
 import { ActualitesComponent } from './actualites/actualites.component';
+import { ContactEnsChefdepComponent } from './contact-ens-chefdep/contact-ens-chefdep.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
@@ -19,4 +20,5 @@ export const routes: Routes = [
     {path:"Mobilités",component:MobiliteComponent},
     {path:"Actualités",component:ActualitesComponent},
     {path:"Sign-in",component:SignInComponent},
+    {path:"Contact-Chef-Dep",component:ContactEnsChefdepComponent},
 ];
