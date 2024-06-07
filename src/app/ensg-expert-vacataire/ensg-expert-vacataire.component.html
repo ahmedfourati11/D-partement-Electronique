@@ -1,4 +1,4 @@
-<h2 class="text-center text-2xl font-bold my-4 text-teal-500">Liste des Enseignants permanents</h2>
+<h2 class="text-center text-2xl font-bold my-4 text-teal-500">Liste Des Enseignants Expert-Vacataire</h2>
 <br>
 <div class="cont-rech">
     <div class="mx-auto max-w-lg">
@@ -27,8 +27,7 @@
                 <div class="min-w-0 flex-auto">
                     <div class="flex items-center">
                         <a href=""><p class="text-sm font-semibold leading-6 text-gray-900 mr-2 hover:text-teal-500">{{ enseignant.nomPrenom }}</p></a>
-                        <a [routerLink]="['/profile-enseignant-permanent', enseignant.nomPrenom]">
-                            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 hover:bg-teal-500 hover:text-white">Profile</span></a>
+                        <a href=""><span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 hover:bg-teal-500 hover:text-white">Profile</span></a>
                     </div>
                     <div class="flex items-center mt-1">
                         <a *ngIf="enseignant.linkedin !== ''" [href]="enseignant.linkedin" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 

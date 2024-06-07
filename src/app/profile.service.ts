@@ -1,20 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
-import { ProfileService } from '../profile.service';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-enseignants',
-  standalone: true,
-  imports: [CommonModule,FormsModule,RouterLink,RouterModule],
-  templateUrl: './enseignants.component.html',
-  styleUrl: './enseignants.component.css'
+@Injectable({
+  providedIn: 'root'
 })
-export class EnseignantsComponent {
-
-  searchTerm: string = '';
-
+export class ProfileService {
 
   enseignants: any[] = [
     { nomPrenom: 'MNIF Hassène', grade: 'Professeur', email: 'Hassene.Mnif@enetcom.usf.tn',linkedin :'https://www.linkedin.com/in/hassene-mnif-57786911a/' ,description: ["- Dispenser les cours " ,"* Smart Grid & Energy Harvesting " , "* Circuits et systèmes RF" , "* Gestion d'énergie pour les systèmes embarqués" , "* Electronique analogique 2" , "* Optoélectronique " , "* Chaine d'acquisition" , "* Technologie de circuits intégrés analogiques" , "* Compatibilité Electromagnétique" , "* Instrumentation et chaines de mesure"]},
@@ -94,38 +83,12 @@ export class EnseignantsComponent {
     { nomPrenom: 'SMAOUI Soulaimen', grade: 'Assistant', email: 'soulaimen.smaoui@enetcom.usf.tn',linkedin:'https://www.linkedin.com/in/soulaimen-smaoui-34a9a925/' ,description:["- Cours assurés :" , "* Objets connectés" , "* RFID"	, "* Programmation ARM" , "* POO C++" , "- TP assurés :" ,"* RFID","* Programmation ARM","* POO C++","* Architecture des ordinateurs","* SDR"]},
   
   ];
-  
-  enseignantsOriginaux: any[] = [
-  ];
-  
-  
-  ngOnInit() {
-    // Copie la liste originale des enseignants lors de l'initialisation du composant
-    this.enseignantsOriginaux = [...this.enseignants];}
 
-    constructor(private router: Router, private service: ProfileService) {}
 
-    goToProfile(nomPrenom: string) {
-      this.router.navigate(['/profile-enseignant-permanent', nomPrenom]);
-    }
+  getEnseignantByNomPrenom(nomPrenom: string): any {
+    // Implémentez la logique pour récupérer l'enseignant correspondant à partir du nom et prénom fournis
+    return this.enseignants.find(enseignant => enseignant.nomPrenom === nomPrenom);
+  }
 
-    clearSearch() {
-      this.searchTerm = ''; 
-      this.enseignants = [...this.enseignantsOriginaux];
-    }
-
-    onSearch() {
-      if (this.searchTerm.trim() === '') {
-        console.log("Aucun terme de recherche, réinitialisation de la liste des enseignants.");
-        // Réinitialise la liste des enseignants à la liste originale
-        this.enseignants = [...this.enseignantsOriginaux];
-      } else {
-        const searchLower = this.searchTerm.toLowerCase();
-        // Filtre la liste des enseignants en fonction du terme de recherche
-        this.enseignants = this.enseignantsOriginaux.filter(enseignant =>
-          enseignant.nomPrenom.toLowerCase().includes(searchLower)
-        );
-      }
-    }
-
+  constructor() {}
 }

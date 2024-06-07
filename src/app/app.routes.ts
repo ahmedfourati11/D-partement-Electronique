@@ -9,10 +9,16 @@ import { SallesComponent } from './salles/salles.component';
 import { MobiliteComponent } from './mobilite/mobilite.component';
 import { ActualitesComponent } from './actualites/actualites.component';
 import { ContactEnsChefdepComponent } from './contact-ens-chefdep/contact-ens-chefdep.component';
+import { EnsgExpertVacataireComponent } from './ensg-expert-vacataire/ensg-expert-vacataire.component';
+import { ProfileEneignantPermanentComponent } from './profile-eneignant-permanent/profile-eneignant-permanent.component';
+import { ProfileEneignantExpertVacataireComponent } from './profile-eneignant-expert-vacataire/profile-eneignant-expert-vacataire.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
-    {path:"Enseignants",component:EnseignantsComponent},
+    {path:"Enseignants-Permanents",component:EnseignantsComponent},
+    {path:"profile-enseignant-permanent/:nomPrenom", component:ProfileEneignantPermanentComponent},
+    {path:"Enseignants-Expert-Vacataire",component:EnsgExpertVacataireComponent},
+    {path:"Enseignants-Expert-Vacataire/:Nom-Ensg", component:ProfileEneignantExpertVacataireComponent},
     {path:"Anciens-diplomes",component:AncienDiplomesComponent},
     {path:"contact-chef-departement",component:ContactChefComponent},
     {path:"Formations",component:FormationsComponent},
