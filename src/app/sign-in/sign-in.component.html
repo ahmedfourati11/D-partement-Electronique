@@ -1,5 +1,5 @@
 <div class="flex min-h-full flex-col justify-center px-6 py-4 lg:px-8">
-    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-md bg-white p-10 rounded-lg shadow-lg">
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-md bg-white p-10">
       <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <img class="mx-auto h-20 w-auto" src="logo_DE-01.png" alt="Logo">
         <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-teal-500">Bienvenue Chère Enseignant !</h2>
@@ -7,8 +7,8 @@
       <form [formGroup]="loginForm" (ngSubmit)="login()" class="space-y-7">
         <div>
           <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Adresse E-mail</label>
-          <div class="mt-2">
-            <input id="email" name="email" type="email" autocomplete="email" formControlName="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Veuillez Entrer Votre Adresse E-mail">
+          <div class="mt-2 shadow-sm rounded-md">
+            <input id="email" name="email" type="email" autocomplete="email" formControlName="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6" placeholder="Veuillez Entrer Votre Adresse E-mail">
           </div>
         </div>
   
@@ -19,8 +19,8 @@
               <a href="#" class="font-semibold text-teal-500 hover:text-teal-600">Mot de Passe Oublié ?</a>
             </div>
           </div>
-          <div class="mt-2">
-            <input id="password" name="password" type="password" autocomplete="current-password" formControlName="password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Veuillez Entrer Votre Mot De Passe">
+          <div class="mt-2 shadow-sm rounded-md">
+            <input id="password" name="password" type="password" autocomplete="current-password" formControlName="password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6" placeholder="Veuillez Entrer Votre Mot De Passe">
           </div>
         </div>
   
