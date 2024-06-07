@@ -17,7 +17,7 @@ export class EnseignantsComponent {
 
 
   enseignants: any[] = [
-    { nomPrenom: 'MNIF Hassène', grade: 'Professeur', email: 'Hassene.Mnif@enetcom.usf.tn',linkedin :'https://www.linkedin.com/in/hassene-mnif-57786911a/' ,description: ["- Dispenser les cours " ,"* Smart Grid & Energy Harvesting " , "* Circuits et systèmes RF" , "* Gestion d'énergie pour les systèmes embarqués" , "* Electronique analogique 2" , "* Optoélectronique " , "* Chaine d'acquisition" , "* Technologie de circuits intégrés analogiques" , "* Compatibilité Electromagnétique" , "* Instrumentation et chaines de mesure"]},
+    { nomPrenom: 'MNIF Hassène', grade: 'Professeur', email: 'Hassene.Mnif@enetcom.usf.tn',linkedin :'https://www.linkedin.com/in/hassene-mnif-57786911a/' ,cours: ["* Smart Grid & Energy Harvesting " , "* Circuits et systèmes RF" , "* Gestion d'énergie pour les systèmes embarqués" , "* Electronique analogique 2" , "* Optoélectronique " , "* Chaine d'acquisition" , "* Technologie de circuits intégrés analogiques" , "* Compatibilité Electromagnétique" , "* Instrumentation et chaines de mesure"]},
   
     { nomPrenom: 'GHARIANI Moez', grade: 'Professeur', email: 'Moez.Ghariani@enetcom.usf.tn',linkedin :'https://www.linkedin.com/in/moez-ghariani-055223113/' ,description:["- Cours assurés :" ,"* Véhicules électriques Intelligente"	,"* Systemes embarqués automobiles" , "* Alimentation et GE pour SE" , "* Automotive systems and Autosar Architecture"	, "* Véhicule électrique intelligente" , "* Convertisseur statique" , "* Electronique et multiplexage dans les systemes de Trans"	, "* Systèmes embarqués  pour les syststémes Transport" , "* Convertisseur statique" ,"* Electronique de puissance"]},
   

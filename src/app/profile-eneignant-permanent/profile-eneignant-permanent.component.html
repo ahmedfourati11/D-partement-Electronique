@@ -1,13 +1,13 @@
 <div>
-    <div class="px-4 sm:px-0">
-      <h3 class="text-base font-semibold leading-7 text-gray-900">{{ nomPrenom }}</h3>
-      <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Personal details and application.</p>
-    </div>
-    <div class="mt-6 border-t border-gray-100"> 
+  <div class="px-4 sm:px-0">
+    <a href="Enseignants-Permanents"><button class="rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">Retour</button></a>
+    <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Profile de Mr/Mme {{ nomPrenom }}.</p>
+  </div> <br>
+    <div class="mx-8 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-24 bg-white shadow-lg rounded-lg pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24"> 
       <dl class="divide-y divide-gray-100">
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-sm font-medium leading-6 text-gray-900">Nom Prénom </dt>
-          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{enseignant.nomPrenom}}</dd>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ enseignant.nomPrenom }}</dd>
         </div>
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-sm font-medium leading-6 text-gray-900">Grade</dt>
@@ -15,18 +15,36 @@
         </div>
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-sm font-medium leading-6 text-gray-900">Addresse Email</dt>
-          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ enseignant.email}}</dd>
-        </div>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+            <div class="flex items-center">
+              <a [href]="'mailto:' + enseignant.email">
+                <i class="fas fa-envelope text-gray-500 hover:text-teal-500 mr-2"></i>
+              </a>
+              {{ enseignant.email }}
+            </div>
+          </dd>
+        </div>        
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
           <dt class="text-sm font-medium leading-6 text-gray-900">Compte Linkedin</dt>
-          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ enseignant.linkedin}}</dd>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">                      
+            <a *ngIf="enseignant.linkedin !== ''" [href]="enseignant.linkedin" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
+            <a *ngIf="enseignant.linkedin == ''" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
+          </dd>
         </div>
         <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
-          <dt class="text-sm font-medium leading-6 text-gray-900">A propos</dt>
-          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ enseignant.description }}</dd>
+          <dt class="text-sm font-medium leading-6 text-gray-900">Dispenser les cours</dt>
+          <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ enseignant.cours }}</dd>
+        </div>
+    
+        <div *ngIf="enseignant.tp !== ''">
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-gray-900">Dispenser les TPs</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ enseignant.tp }}</dd>
+          </div>
         </div>
 
       </dl>
-    </div> 
+    </div>
+    
   </div>
   

@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router, RouterLink, RouterModule } from '@angular/router';
+import { ProfileexService } from '../profileex.service';
 
 @Component({
   selector: 'app-ensg-expert-vacataire',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,RouterLink],
   templateUrl: './ensg-expert-vacataire.component.html',
   styleUrl: './ensg-expert-vacataire.component.css'
 })
@@ -79,7 +81,11 @@ export class EnsgExpertVacataireComponent {
   enseignantsOriginaux: any[] = [
   ];
   
-  constructor() {}
+  constructor(private router: Router, private service: ProfileexService) {}
+
+  goToProfile(nomPrenom: string) {
+    this.router.navigate(['/Profile-Expert-Vacataire', nomPrenom]);
+  }
   
   ngOnInit() {
     // Copie la liste originale des enseignants lors de l'initialisation du composant

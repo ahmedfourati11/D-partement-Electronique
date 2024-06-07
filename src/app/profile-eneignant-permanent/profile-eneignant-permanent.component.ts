@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProfileService } from '../profile.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-profile-eneignant-permanent',
   standalone: true,
-  imports: [],
+  imports: [CommonModule,RouterLink],
   templateUrl: './profile-eneignant-permanent.component.html',
   styleUrl: './profile-eneignant-permanent.component.css'
 })

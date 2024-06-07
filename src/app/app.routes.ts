@@ -18,7 +18,7 @@ export const routes: Routes = [
     {path:"Enseignants-Permanents",component:EnseignantsComponent},
     {path:"profile-enseignant-permanent/:nomPrenom", component:ProfileEneignantPermanentComponent},
     {path:"Enseignants-Expert-Vacataire",component:EnsgExpertVacataireComponent},
-    {path:"Enseignants-Expert-Vacataire/:Nom-Ensg", component:ProfileEneignantExpertVacataireComponent},
+    {path:"Profile-Expert-Vacataire/:nomPrenom", component:ProfileEneignantExpertVacataireComponent},
     {path:"Anciens-diplomes",component:AncienDiplomesComponent},
     {path:"contact-chef-departement",component:ContactChefComponent},
     {path:"Formations",component:FormationsComponent},
