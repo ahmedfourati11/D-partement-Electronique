@@ -11,6 +11,7 @@ import { HomeComponent } from '../home/home.component';
   styleUrl: './sign-in.component.css'
 })
 export class SignInComponent {
+
     loginForm!: FormGroup;
     errorMessage: string = '';
   
@@ -23,33 +24,25 @@ export class SignInComponent {
     initForm() {
       this.loginForm = this.fb.group({
         email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required, Validators.minLength(6)]]
+        password: ['', [Validators.required, Validators.minLength(4)]]
       });
     }
   
-    getEmail() {
-      return this.loginForm.get('email');
-    }
+    // getEmail() {
+    //   return this.loginForm.get('email');
+    // }
   
-    getPassword() {
-      return this.loginForm.get('password');
-    }
+    // getPassword() {
+    //   return this.loginForm.get('password');
+    // }
   
     login() {
-      if (this.loginForm.valid) {
-        // const email = this.loginForm.get('email')?.value;
-        // const password = this.loginForm.get('password')?.value;
-        // this.authservice.signInUser(email, password).then(
-        //   () => {
-        //     this.router.navigate(['/users']);
-        //   },
-        //   (error) => {
-        //     this.errorMessage = error;
-        //   }
-        // );
-        this.router.navigate(['home']);
+      const email = this.loginForm.get('email')?.value;
+      const password = this.loginForm.get('password')?.value;
+      if (email!==''&&password!=='') {
+        this.router.navigate(['Liste-Des-Email-Groupe']);
       } else {
-        this.errorMessage = 'Veuillez remplir tous les champs correctement.';
+        alert("Identifiants Incorrects")
       }
     }
   }
