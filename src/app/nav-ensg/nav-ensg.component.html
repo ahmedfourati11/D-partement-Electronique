@@ -1,0 +1,58 @@
+<br>
+<header class="bg-white">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+      <div class="flex lg:flex-1">
+        <a routerLink="" class="-m-1.5 p-1.5" style="padding: 0%;margin: 0%;">
+          <span class="sr-only">Your Company</span>
+          <img class="h-8 w-auto" src="logo_DE-01.png" alt="">
+        </a>
+      </div>
+      <div class="flex lg:hidden">
+        <button (click)="toggleMobileMenu()" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <span class="sr-only">Open main menu</span>
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+      <div class="hidden lg:flex lg:gap-x-12">
+        <a routerLink="Formations" class="text-sm font-semibold leading-6 text-gray-900 hover:text-teal-500">Liste Des Adresses E-mail Des Classes</a>
+        <a routerLink="Salles" class="text-sm font-semibold leading-6 text-gray-900 hover:text-teal-500">Demande / Observation / Réclamation</a>
+        <a routerLink="Mobilités" class="text-sm font-semibold leading-6 text-gray-900 hover:text-teal-500">PV Des Réunions Du Département</a>
+        <a routerLink="Actualités" class="text-sm font-semibold leading-6 text-gray-900 hover:text-teal-500">PV Des Autres Réunions</a>
+      </div>
+      <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a  routerLink="Sign-in" target="_blank" class="text-sm font-semibold leading-6 text-gray-900 hover:text-teal-500">Se Déconnecter<span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </nav>
+    <div *ngIf="isOpen" #mobileMenu class="lg:hidden" role="dialog" aria-modal="true">
+      <div class="fixed inset-0 z-10"></div>
+      <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <div class="flex items-center justify-between">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img class="h-8 w-auto" src="logo_DE-01.png" alt="">
+          </a>
+          <button (click)="toggleMobileMenu()" type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700 hover:text-teal-500">
+            <span class="sr-only">Close menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="mt-6 flow-root">
+          <div class="-my-6 divide-y divide-gray-500/10">
+            <div class="space-y-2 py-6">
+              <a routerLink="Formations" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Adresses E-mail Des Classes</a>
+              <a routerLink="Salles" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Demande / Observation / Réclamation</a>
+              <a routerLink="Mobilités" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">PV Des Réunions Du Département</a>
+              <a routerLink="Actualités" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">PV Des Autres Réunions</a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 ">
+          <a routerLink="" class="block w-full py-3 px-4 text-center border border-transparent rounded-md text-base font-semibold text-gray-900 bg-teal-500 hover:bg-teal-400">Se Déconnecter</a>
+        </div>
+      </div>
+    </div>
+  </header>

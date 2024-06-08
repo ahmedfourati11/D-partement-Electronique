@@ -12,6 +12,7 @@ import { ContactEnsChefdepComponent } from './contact-ens-chefdep/contact-ens-ch
 import { EnsgExpertVacataireComponent } from './ensg-expert-vacataire/ensg-expert-vacataire.component';
 import { ProfileEneignantPermanentComponent } from './profile-eneignant-permanent/profile-eneignant-permanent.component';
 import { ProfileEneignantExpertVacataireComponent } from './profile-eneignant-expert-vacataire/profile-eneignant-expert-vacataire.component';
+import { ListeEmailGroupeComponent } from './liste-email-groupe/liste-email-groupe.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
@@ -26,5 +27,6 @@ export const routes: Routes = [
     {path:"Mobilités",component:MobiliteComponent},
     {path:"Actualités",component:ActualitesComponent},
     {path:"Sign-in",component:SignInComponent},
+    {path:"Liste-Des-Email-Groupe",component:ListeEmailGroupeComponent},
     {path:"Contact-Chef-Dep",component:ContactEnsChefdepComponent},
 ];
