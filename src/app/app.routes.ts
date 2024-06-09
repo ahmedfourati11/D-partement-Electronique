@@ -13,9 +13,11 @@ import { EnsgExpertVacataireComponent } from './ensg-expert-vacataire/ensg-exper
 import { ProfileEneignantPermanentComponent } from './profile-eneignant-permanent/profile-eneignant-permanent.component';
 import { ProfileEneignantExpertVacataireComponent } from './profile-eneignant-expert-vacataire/profile-eneignant-expert-vacataire.component';
 import { ListeEmailGroupeComponent } from './liste-email-groupe/liste-email-groupe.component';
+import { AvisPartenairesComponent } from './avis-partenaires/avis-partenaires.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
+    {path:"Avis-De-Nos-Partenaires",component:AvisPartenairesComponent},
     {path:"Enseignants-Permanents",component:EnseignantsComponent},
     {path:"profile-enseignant-permanent/:nomPrenom", component:ProfileEneignantPermanentComponent},
     {path:"Enseignants-Expert-Vacataire",component:EnsgExpertVacataireComponent},

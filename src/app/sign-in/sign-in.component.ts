@@ -40,7 +40,7 @@ export class SignInComponent {
       const email = this.loginForm.get('email')?.value;
       const password = this.loginForm.get('password')?.value;
       if (email!==''&&password!=='') {
-        this.router.navigate(['Liste-Des-Email-Groupe']);
+        this.router.navigate(['/Liste-Des-Email-Groupe']);
       } else {
         alert("Identifiants Incorrects")
       }

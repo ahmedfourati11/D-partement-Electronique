@@ -1,5 +1,13 @@
 <ng-container *ngIf="shouldShowNavbar()">
     <app-navbar></app-navbar>
-  </ng-container>
-  <router-outlet></router-outlet>
-  
+</ng-container>
+
+<ng-container *ngIf="ashouldShowNavbar()">
+  <app-nav-ensg></app-nav-ensg>
+</ng-container>
+
+<router-outlet></router-outlet>
+
+<ng-container *ngIf="shouldShowNavbar()">
+  <app-footer></app-footer>
+</ng-container>  

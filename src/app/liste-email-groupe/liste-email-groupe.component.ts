@@ -6,7 +6,7 @@ import { NavEnsgComponent } from '../nav-ensg/nav-ensg.component';
 @Component({
   selector: 'app-liste-email-groupe',
   standalone: true,
-  imports: [CommonModule,FormsModule,NavEnsgComponent],
+  imports: [CommonModule,FormsModule],
   templateUrl: './liste-email-groupe.component.html',
   styleUrl: './liste-email-groupe.component.css'
 })

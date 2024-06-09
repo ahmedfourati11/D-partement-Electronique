@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { AvisPartenairesComponent } from '../avis-partenaires/avis-partenaires.component';
+import { NosPartenairesComponent } from '../nos-partenaires/nos-partenaires.component';
+import { AccreditationComponent } from '../accreditation/accreditation.component';
+import { NosFormationsComponent } from '../nos-formations/nos-formations.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [AvisPartenairesComponent,NosPartenairesComponent,AccreditationComponent,NosFormationsComponent,RouterLink],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
