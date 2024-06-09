@@ -14,10 +14,17 @@ import { ProfileEneignantPermanentComponent } from './profile-eneignant-permanen
 import { ProfileEneignantExpertVacataireComponent } from './profile-eneignant-expert-vacataire/profile-eneignant-expert-vacataire.component';
 import { ListeEmailGroupeComponent } from './liste-email-groupe/liste-email-groupe.component';
 import { AvisPartenairesComponent } from './avis-partenaires/avis-partenaires.component';
+import { NosFormationsComponent } from './nos-formations/nos-formations.component';
+import { AccreditationComponent } from './accreditation/accreditation.component';
+import { NosPartenairesComponent } from './nos-partenaires/nos-partenaires.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
+    {path:"Nos-Formations",component:NosFormationsComponent},
+    {path:"Accreditation",component:AccreditationComponent},
+    {path:"Nos-Partenaires",component:NosPartenairesComponent},
     {path:"Avis-De-Nos-Partenaires",component:AvisPartenairesComponent},
+
     {path:"Enseignants-Permanents",component:EnseignantsComponent},
     {path:"profile-enseignant-permanent/:nomPrenom", component:ProfileEneignantPermanentComponent},
     {path:"Enseignants-Expert-Vacataire",component:EnsgExpertVacataireComponent},
