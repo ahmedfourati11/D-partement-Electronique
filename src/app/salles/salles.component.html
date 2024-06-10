@@ -1,1 +1,22 @@
-<p>salles works!</p>
+<h2 class="text-center text-2xl font-bold my-4 text-teal-500">Liste des Salles De TP</h2>
+<br>
+
+<body class="bg-white-200">
+    <ul role="list" class="divide-y divide-white-100 bg-white pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24">
+        <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3" *ngFor="let salle of salles; let isLast = last; index as i">
+            <div class="flex min-w-0 gap-x-4">
+
+                <div class="min-w-0 flex-auto">
+                    <div class="flex items-center">
+                        <p class="text-sm font-semibold leading-6 text-gray-900 mr-2 hover:text-teal-500">{{ salle.noms }}</p>
+                        <a ><span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 hover:bg-teal-500 hover:text-white">Voir Plus</span></a>
+                    </div>
+                    <!-- [routerLink]="['/profile-enseignant-permanent', enseignant.nomPrenom]" -->
+                </div>
+            </div>
+            <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+                <p class="text-sm leading-10 text-gray-900">{{ salle.abreviation }}</p>
+            </div>
+        </li>
+    </ul>
+</body>
