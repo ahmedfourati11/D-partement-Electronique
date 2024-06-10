@@ -5,11 +5,12 @@ import { NosPartenairesComponent } from '../nos-partenaires/nos-partenaires.comp
 import { AccreditationComponent } from '../accreditation/accreditation.component';
 import { NosFormationsComponent } from '../nos-formations/nos-formations.component';
 import { RouterLink } from '@angular/router';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AvisPartenairesComponent,NosPartenairesComponent,AccreditationComponent,NosFormationsComponent,RouterLink],
+  imports: [AvisPartenairesComponent,NosPartenairesComponent,AccreditationComponent,NosFormationsComponent,RouterLink,ContactComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
