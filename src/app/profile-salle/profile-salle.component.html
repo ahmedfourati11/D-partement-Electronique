@@ -1,0 +1,43 @@
+<div>
+    <div class="px-4 sm:px-0">
+      <a href="Salles"><button class="rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">Retour</button></a>
+      <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Profile du {{ noms }}.</p>
+    </div> <br>
+
+      <div class="mx-8 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-24 bg-white shadow-lg rounded-lg pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24"> 
+        <dl class="divide-y divide-gray-100">
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Nom De La Salle</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ salle.noms }} ( {{ salle.abreviation }} )</dd>
+          </div>
+
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Couvre Les Domaines D'activités Suivant</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <div *ngFor="let description of salle.description">
+                 {{ description }}
+              </div>
+            </dd>
+          </div> 
+          
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Désignations Des Matériels</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <div *ngFor="let materiel of salle.materiel">
+                * {{ materiel }}
+              </div>
+            </dd>
+          </div>
+      
+          <div>
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-teal-500">Logiciels</dt>
+              <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ salle.rqetlog }}</dd>
+            </div>
+          </div>
+  
+        </dl>
+      </div>
+      
+    </div>
+    

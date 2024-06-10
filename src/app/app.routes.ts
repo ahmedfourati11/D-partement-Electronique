@@ -17,6 +17,7 @@ import { AvisPartenairesComponent } from './avis-partenaires/avis-partenaires.co
 import { NosFormationsComponent } from './nos-formations/nos-formations.component';
 import { AccreditationComponent } from './accreditation/accreditation.component';
 import { NosPartenairesComponent } from './nos-partenaires/nos-partenaires.component';
+import { ProfileSalleComponent } from './profile-salle/profile-salle.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
@@ -24,7 +25,6 @@ export const routes: Routes = [
     {path:"Accreditation",component:AccreditationComponent},
     {path:"Nos-Partenaires",component:NosPartenairesComponent},
     {path:"Avis-De-Nos-Partenaires",component:AvisPartenairesComponent},
-
     {path:"Enseignants-Permanents",component:EnseignantsComponent},
     {path:"profile-enseignant-permanent/:nomPrenom", component:ProfileEneignantPermanentComponent},
     {path:"Enseignants-Expert-Vacataire",component:EnsgExpertVacataireComponent},
@@ -33,6 +33,7 @@ export const routes: Routes = [
     {path:"contact-chef-departement",component:ContactChefComponent},
     {path:"Formations",component:FormationsComponent},
     {path:"Salles",component:SallesComponent},
+    {path:"Profile-Salle/:noms", component:ProfileSalleComponent},
     {path:"Mobilités",component:MobiliteComponent},
     {path:"Actualités",component:ActualitesComponent},
     {path:"Sign-in",component:SignInComponent},
