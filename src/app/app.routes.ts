@@ -18,6 +18,7 @@ import { NosFormationsComponent } from './nos-formations/nos-formations.componen
 import { AccreditationComponent } from './accreditation/accreditation.component';
 import { NosPartenairesComponent } from './nos-partenaires/nos-partenaires.component';
 import { ProfileSalleComponent } from './profile-salle/profile-salle.component';
+import { ProfileAncienDiplomeComponent } from './profile-ancien-diplome/profile-ancien-diplome.component';
 
 export const routes: Routes = [
     {path:"",component:HomeComponent},
@@ -30,6 +31,7 @@ export const routes: Routes = [
     {path:"Enseignants-Expert-Vacataire",component:EnsgExpertVacataireComponent},
     {path:"Profile-Expert-Vacataire/:nomPrenom", component:ProfileEneignantExpertVacataireComponent},
     {path:"Anciens-diplomes",component:AncienDiplomesComponent},
+    {path:"Profile-ancien-diplome/:nom_prenom",component:ProfileAncienDiplomeComponent},
     {path:"contact-chef-departement",component:ContactChefComponent},
     {path:"Formations",component:FormationsComponent},
     {path:"Salles",component:SallesComponent},

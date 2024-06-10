@@ -1,0 +1,62 @@
+<div>
+    <div class="px-4 sm:px-0">
+      <a href="Anciens-diplomes"><button class="rounded-md bg-teal-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-teal-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">Retour</button></a>
+      <p class="mt-1 max-w-2xl text-sm leading-6 text-gray-500">Profil De L'ancien diplômé {{ nom_prenom }}.</p>
+    </div> <br>
+      <div class="mx-8 sm:mx-12 md:mx-16 lg:mx-20 xl:mx-24 bg-white shadow-lg rounded-lg pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-12 pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24"> 
+        <dl class="divide-y divide-gray-100">
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Nom Prénom </dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ anc.nom_prenom }}</dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Année de l'obtention du diplôme</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ anc.ann_obt_dip }}</dd>
+          </div>
+
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Société de travail actuelle</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ anc.soc_trav_act }}</dd>
+          </div>
+
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Poste Occupée</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ anc.poste_occupee }}</dd>
+          </div>
+
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Adresse Email</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">
+              <div class="flex items-center">
+                <a [href]="'mailto:' + anc.add_mail">
+                  <i class="fas fa-envelope text-gray-500 hover:text-teal-500 mr-2"></i>
+                </a>
+                {{ anc.add_mail }}
+              </div>
+            </dd>
+          </div>        
+
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Compte Linkedin</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">                      
+              <a *ngIf="anc.linkedin !== ''" [href]="anc.linkedin" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
+              <a *ngIf="anc.linkedin == ''" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
+            </dd>
+          </div>
+          <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+            <dt class="text-sm font-medium leading-6 text-teal-500">Description du parcours professionnel</dt>
+            <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">{{ anc.description }}</dd>
+          </div>
+      
+          <!-- <div *ngIf="anc.tp !== ''">
+            <div class="px-4 py-6 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-0">
+              <dt class="text-sm font-medium leading-6 text-teal-500">Dispenser les TPs</dt>
+              <dd class="mt-1 text-sm leading-6 text-gray-700 sm:col-span-2 sm:mt-0">aaaaaa</dd>
+            </div>
+          </div> -->
+  
+        </dl>
+      </div>
+      
+    </div>
+    

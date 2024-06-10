@@ -1,23 +1,46 @@
 <h2 class="text-center text-2xl font-bold my-4 text-teal-500">Liste Des Anciens Diplômés</h2>
+<br>
+<div class="cont-rech px-2 sm:px-4">
+    <div class="w-full max-w-lg mx-auto">
+        <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                <svg class="h-5 w-5 text-gray-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </span>
+            <input type="text" class="block w-full pl-10 pr-8 py-2 rounded-md border-gray-300 focus:border-teal-500 focus:ring-teal-500 shadow-sm" placeholder="Rechercher..." [(ngModel)]="searchTerm" (input)="onSearch()">
+            <button type="button" class="absolute inset-y-0 right-0 pr-3 flex items-center" (click)="clearSearch()">
+                <svg class="h-5 w-5 text-gray-500 hover:text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
 <body class="bg-white-200">
     <ul role="list" class="divide-y divide-white-100 bg-white pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24">
-        <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3" *ngFor="let enseignant of enseignants; let isLast = last; index as i">
+        <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3" *ngFor="let anc of anc_dip; let isLast = last; index as i">
             <div class="flex min-w-0 gap-x-4">
                 <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                 <div class="min-w-0 flex-auto">
                     <div class="flex items-center">
-                        <a href=""><p class="text-sm font-semibold leading-6 text-gray-900 mr-2 hover:text-teal-500">{{ enseignant.nomPrenom }}</p></a>
-                        <a href=""><span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 hover:bg-teal-500 hover:text-white">Profile</span></a>
+                        <p class="text-sm font-semibold leading-6 text-gray-900 mr-2 hover:text-teal-500">{{ anc.nom_prenom }}</p>
+                        <a [routerLink]="['/Profile-ancien-diplome', anc.nom_prenom]">
+                            <span class="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10 hover:bg-teal-500 hover:text-white">Profile</span></a>
                     </div>
                     <div class="flex items-center mt-1">
-                        <a [href]="enseignant.linkedin" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
-                        <a [href]="'mailto:' + enseignant.email"><i class="fas fa-envelope text-gray-500 mr-2 hover:text-teal-500"></i></a>
-                        <p class="truncate text-xs leading-5 text-gray-500">{{ enseignant.email }}</p>
+                        <a *ngIf="anc.linkedin !== ''" [href]="anc.linkedin" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
+                        <a *ngIf="anc.linkedin == ''" target="_blank"><i class="fab fa-linkedin text-gray-500 mr-2 hover:text-teal-500"></i></a> 
+                        <a [href]="'mailto:' + anc.add_mail"><i class="fas fa-envelope text-gray-500 mr-2 hover:text-teal-500"></i></a>
+                        <p class="truncate text-xs leading-5 text-gray-500">{{ anc.add_mail }}</p>
                     </div>
                 </div>
             </div>
             <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-10 text-gray-900">{{ enseignant.grade }}</p>
+                <p class="text-sm leading-10 text-gray-900">{{ anc.poste_occupee }}</p>
+                <p class="mt-1 text-xs leading-5 text-gray-500">{{ anc.soc_trav_act }}</p>
             </div>
         </li>
     </ul>
