@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component,ElementRef, ViewChild} from '@angular/core';
+import { Component,ElementRef, ViewChild,HostListener} from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -11,12 +11,27 @@ import { RouterModule } from '@angular/router';
 })
 export class NavbarComponent {
 
+  constructor(private elementRef: ElementRef) { }
+
+  closeDropdown() {
+    this.isDropdownOpen = false;
+  }
+
+  closeMobileMenu() {
+    this.isOpen = false;
+  }  
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+  if (!this.elementRef.nativeElement.contains(event.target)) {
+    this.closeDropdown();
+  }
+}
+
   @ViewChild('mobileMenu') mobileMenu!: ElementRef<HTMLDivElement>;
   isDropdownOpen: boolean = false;
   isMobileDropdownOpen: boolean = false;
   isOpen: boolean = false;
-
-  constructor() { }
 
   toggleDropdown() {
     this.isDropdownOpen = !this.isDropdownOpen;

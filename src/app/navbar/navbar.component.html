@@ -24,7 +24,7 @@
           </button>
           <div *ngIf="isDropdownOpen" class="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
             <div class="p-4">
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div (click)="closeDropdown()" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">          
                 <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-gray-600 group-hover:text-teal-500">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
@@ -39,7 +39,7 @@
                 </div>
               </div>
 
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div (click)="closeDropdown()" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                 <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-gray-600 group-hover:text-teal-500">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
@@ -55,7 +55,7 @@
                 </div>
               </div>
 
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div (click)="closeDropdown()" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                 <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-gray-600 group-hover:text-teal-500">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
@@ -70,7 +70,7 @@
                 </div>
               </div>
 
-              <div class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
+              <div (click)="closeDropdown()" class="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50">
                 <div class="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 text-gray-600 group-hover:text-teal-500">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -86,7 +86,7 @@
               </div>
               <!-- More items... -->
             </div>
-            <div class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+            <div (click)="closeDropdown()" class="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
               <!-- <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100">
                 <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm6.39-2.908a.75.75 0 01.766.027l3.5 2.25a.75.75 0 010 1.262l-3.5 2.25A.75.75 0 018 12.25v-4.5a.75.75 0 01.39-.658z" clip-rule="evenodd" />
@@ -138,32 +138,32 @@
                 </button>
                 <div *ngIf="isMobileDropdownOpen" class="mt-1 -ml-4 ring-black ring-opacity-5 overflow-hidden">
                   <div class="py-1">
-                    <a routerLink="Enseignants-Permanents" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Enseignants Permanents</a>
+                    <a (click)="closeMobileMenu()" routerLink="Enseignants-Permanents" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Enseignants Permanents</a>
                   </div>
 
                   <div class="py-1">
-                    <a routerLink="Enseignants-Expert-Vacataire" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Enseignants Expert-Vacataire</a>
+                    <a (click)="closeMobileMenu()" routerLink="Enseignants-Expert-Vacataire" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Enseignants Expert-Vacataire</a>
                   </div>
 
                   <div class="py-1">
-                    <a routerLink="Anciens-diplomes" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Anciens diplômés</a>
+                    <a (click)="closeMobileMenu()" routerLink="Anciens-diplomes" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Liste Des Anciens diplômés</a>
                   </div>
 
-                  <div class="py-1">
+                  <div (click)="closeMobileMenu()" class="py-1">
                     <a routerLink="contact-chef-departement" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Contacter Le Chef Du Département</a>
                   </div>
 
                 </div>
               </div>
-              <a routerLink="Formations" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Formations</a>
-              <a routerLink="Salles" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Salles</a>
-              <a routerLink="Mobilités" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Mobilités</a>
-              <a routerLink="Actualités" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Actualités</a>
+              <a (click)="closeMobileMenu()" routerLink="Formations" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Formations</a>
+              <a (click)="closeMobileMenu()" routerLink="Salles" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Salles</a>
+              <a (click)="closeMobileMenu()" routerLink="Mobilités" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Mobilités</a>
+              <a (click)="closeMobileMenu()" routerLink="Actualités" class="block px-4 py-2 text-base font-medium text-gray-900 hover:text-teal-500">Actualités</a>
             </div>
           </div>
         </div>
         <div class="mt-6 ">
-          <a routerLink="Sign-in" class="block w-full py-3 px-4 text-center border border-transparent rounded-md text-base font-semibold text-gray-900 bg-teal-500 hover:bg-teal-400">Espace Enseignant</a>
+          <a (click)="closeMobileMenu()" routerLink="Sign-in" class="block w-full py-3 px-4 text-center border border-transparent rounded-md text-base font-semibold text-gray-900 bg-teal-500 hover:bg-teal-400">Espace Enseignant</a>
         </div>
       </div>
     </div>
