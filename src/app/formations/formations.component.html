@@ -5,6 +5,7 @@
     <ul role="list" class="divide-y divide-white-100 bg-white pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-12 pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24">
 
         <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
+            <a href="/Formations/#licence">
             <div class="flex min-w-0 gap-x-4">
                 <div class="min-w-0 flex-auto">
                     <div class="flex items-center">
@@ -18,12 +19,11 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-                <p class="text-sm leading-10 text-gray-900">grade</p>
-            </div> -->
+            </a>
         </li>
-
+        <!-- fléche licence -->
         <li class="flex flex-col sm:flex-row justify-center items-center gap-x-3 gap-y-3 py-3">
+            <a href="/Formations/#licence">
             <div class="flex flex-col sm:flex-row min-w-0 gap-x-4 justify-center items-center">
                 <div class="min-w-0 flex-auto text-center sm:text-left">
                     <div class="flex justify-center sm:justify-start items-center text-teal-500">
@@ -34,9 +34,11 @@
                     </div>
                 </div>
             </div>
+            </a>
         </li>
-        
+        <!-- fléche mastére -->        
         <li class="flex flex-col sm:flex-row justify-center items-center gap-x-3 gap-y-3 py-3">
+            <a href="/Formations/#mastere">
             <div class="flex flex-col sm:flex-row min-w-0 gap-x-4 justify-center items-center">
                 <div class="min-w-0 flex-auto text-center sm:text-left">
                     <div class="flex justify-center sm:justify-start items-center text-teal-500">
@@ -47,23 +49,25 @@
                     </div>
                 </div>
             </div>
+            </a>
         </li>
-    
+        <!-- fléche gec -->    
         <li class="flex flex-col sm:flex-row justify-center items-center gap-x-3 gap-y-3 py-3">
-            <div class="flex flex-col sm:flex-row min-w-0 gap-x-4 justify-center items-center">
-                <div class="min-w-0 flex-auto text-center sm:text-left">
-                    <div class="flex justify-center sm:justify-start items-center text-teal-500">
-                        <p class="text-lg font-semibold leading-6">Génie des Systémes Electroniques de Communication</p>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
+            <a href="/Formations/#gec">
+                <div class="flex flex-col sm:flex-row min-w-0 gap-x-4 justify-center items-center">
+                    <div class="min-w-0 flex-auto text-center sm:text-left">
+                        <div class="flex justify-center sm:justify-start items-center text-teal-500">
+                            <p class="text-lg font-semibold leading-6">Génie des Systémes Electroniques de Communication</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
+                            </svg>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
         </li>
-        
-
-        <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
+        <!-- DEScription Licence -->
+        <li id="licence" class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
             <div class="flex min-w-0 gap-x-4">
                 <div class="min-w-0 flex-auto">
                     <div class="flex items-center text-center">
@@ -85,8 +89,8 @@
                 </div>
             </div>
         </li>
-
-        <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
+        <!-- DEScription Mastére -->
+        <li id="mastere" class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
             <div class="flex min-w-0 gap-x-4">
                 <div class="min-w-0 flex-auto">
                     <div class="flex items-center text-center">
@@ -112,8 +116,8 @@
                 </div>
             </div>
         </li>
-
-        <li class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
+        <!-- DEScription GEC avec option et compétences spécifiques , répartition du volume horaire-->
+        <li id="gec" class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
             <div class="flex min-w-0 gap-x-4">
                 <div class="min-w-0 flex-auto">
                     <div class="flex items-center text-center">
@@ -121,19 +125,150 @@
                     </div>
                     <div class="flex items-center mt-1">
                         <p class="mt-3 text-l leading-6 text-black">
-                            Cette formation permettra au diplômé de : <br>
-                            ● Développer une compétence métier relevant de l’un des domaines suivants :
-                            systèmes embarqués, domotique et réseau d’intérieur <br>
-                            ● Savoir appliquer les principales procédures et méthodes utilisées dans la mise en
-                            œuvre des systèmes embarqués <br>
-                            ● Définir, justifier, planifier et mener à terme un projet d’implémentation d’une
-                            technologie existante ou des projets de développement dans le domaine de la
-                            technologie de systèmes embarqués <br>
-                            ● Maitriser la conception et le développement des systèmes intégrants <br>
-                            ● Concevoir des interfaces homme/machine pour la supervision des systèmes
-                            domotiques <br>
-                            ● Maitriser les concepts de l’électronique avancée pour appréhender et concevoir des
-                            dispositifs en systèmes embarqués.
+                            ● S1 - S4 : Les deux premières années, de S1 à S4, assurent la formation de l'ingénieur polyvalent ayant le niveau minimal  de compétences lui permettant d’intégrer tous les métiers de l’ingénieur visés
+                            <br>
+                            ● S5 : Le semestre S5 assure la spécialisation à travers l’une des options choisie par l’étudiant
+                        </p> 
+                    </div> 
+                    <br>
+                    <div class="flex items-center text-center justify-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Les Options</p>
+                    </div>
+                    <br>  
+                    <!-- SE -->
+                    <div class="flex items-center text-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Option Systèmes Embarqués (SE)</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <p class="mt-3 text-l leading-6 text-black">
+                            ● Modules d’enseignement : <br>
+                            - Architecture matérielle & conception système <br>
+                            - Machine learning & systèmes d'exploitation <br>
+                            - Réseaux & communication <br>
+                            - Technologies embarquées pour le transport <br>
+                            - Sciences humaines et cultures de l’ingénieur <br>
+                        
+                            ● Le futur diplômé sera bien placé pour : <br>
+                            - Concevoir et développer des systèmes électroniques et des systèmes embarqués <br>
+                            - Exploiter des architectures SoCs pour des applications temps réel <br>
+                            - Développer des logiciels embarqués pour des processeurs dédiés <br>
+                            - Intégrer et valider des technologies embarquées pour le transport (conception et diagnostic)
+                        </p> 
+                    </div> 
+<br>
+                    <!-- SC -->
+                    <div class="flex items-center text-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Option Systèmes Connectés (SC)</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <p class="mt-3 text-l leading-6 text-black"> 
+                            ● Modules d’enseignement : <br>
+                            - Systèmes IoT <br>
+                            - Technologies embarquées <br>
+                            - Smart City <br>
+                            - Technologies de connectivité <br>
+                            - Sciences humaines et cultures de l’ingénieur <br>
+                        
+                            ● Le futur diplômé sera bien placé pour : <br>
+                            - Concevoir des systèmes électroniques embarqués communicants <br>
+                            - Intégrer  et valider des technologies des systèmes connectés <br>
+                            - Développer des applications Smart dans le domaine informatique et réseaux <br>
+                            - Concevoir des applications dans les secteurs les plus innovateurs de l'interaction et la communication Homme-machine
+                        </p> 
+                    </div> 
+
+                    <br>
+                    <!-- SEI -->
+                    <div class="flex items-center text-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Option Systèmes Électronique Intelligents (SEI)</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <p class="mt-3 text-l leading-6 text-black"> 
+                            ● Modules d’enseignement : <br>
+                            - Conception des systèmes électroniques <br>
+                            - Conception des systèmes intelligents <br>
+                            - Conception des systèmes embarqués <br>
+                            - Conception électronique médicale <br>
+                            - Sciences humaines et cultures de l’ingénieur <br>
+                        
+                            ● Le futur diplômé sera bien placé pour : <br>
+                            - Concevoir et développer des systèmes électroniques intelligents et embarqués <br>
+                            - Exploiter des nouvelles technologies comme IoT, IA, et Machine Learning <br>
+                            - Concevoir, valider et développer des circuits électroniques par des langages haut niveau <br>
+                            - Développer des logiciels embarqués pour les diagnostics des applications dans le domaine imagerie, instrumentation médicale et la biomédecine.
+                        </p> 
+                    </div> 
+                    <br>
+                    <br>
+                    <!-- Compétences spécifiques (CS) -->
+                    <div class="flex items-center text-center justify-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Les Compétences Spécifiques (CS)</p>
+                    </div>
+                      
+                    <div class="flex items-center mt-1">
+                        <p class="mt-3 text-l leading-6 text-black">
+                            ● CS1 : Identifier, analyser et synthétiser un système lié à l'implémentation des circuits en électronique analogique et numérique <br>
+                            ● CS2 : Concevoir et développer les applications informatiques pour différents systèmes et protocoles de communications <br>
+                            ● CS3 : Maîtriser des techniques pour l’acquisition et le traitement de l’information liés aux systèmes électroniques <br>
+                            ● CS4 : Caractériser et maîtriser les méthodes de mesures, d’instrumentation industrielle, et les différentes exigences normatives d’essais en compatibilité électromagnétique <br>
+                            ● CS5 : Maîtriser les systèmes électriques en termes de commande des processus, de production et de gestion des énergies<br>
+                            ● CS6 : Concevoir, tester et valider des dispositifs matériels et logiciels pour les systèmes embarqués <br>
+                            ● CS7 : Contrôler et piloter les systèmes innovants fondés sur l’IA & Machine Learning	
+                            <br>
+                            ● CS8 : Analyser et traiter les réseaux de télécommunications et les objets connectés<br>
+                            ● CS9 : Développer des compétences personnelles, organisationnelles et managériales tenant en compte des enjeux environnementaux et sociaux<br>
+                            ● CS10 : Maîtrise des techniques de communication avec un public varié et auto-développèrent personnel et relationnel appréhendant le travail d’équipe
+                        </p> 
+                    </div> 
+                    <br><br>
+                    <!-- Répartition du volume horaire par domaine S1 à S4 -->
+                    <div class="flex items-center justify-center text-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2">Répartition du volume horaire par domaine S1 à S4 et S5</p>
+                    </div>
+                    
+                    <div class="flex flex-wrap items-center justify-center mt-10">
+                        <img src="rep1.png" alt="Répartition S1 à S4" class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 object-contain p-2">
+                        <img src="rep2.png" alt="Répartition S5" class="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 object-contain p-2">
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Insertion à la vie professionnelle -->
+        <li id="licence" class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
+            <div class="flex min-w-0 gap-x-4">
+                <div class="min-w-0 flex-auto">
+                    <div class="flex items-center text-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Insertion à la vie professionnelle</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <p class="mt-3 text-l leading-6 text-black">
+                            ● Stage d’initiation (1 mois)                            
+                            <br>
+                            ● Stage de perfectionnement (1 mois)                            
+                            <br>
+                            ● Projet de fin d’études (16 semaines)    <br>   
+                            ● Visites industrielles et séminaires techniques                                                  
+                        </p> 
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Plan d’actions -->
+        <li id="licence" class="flex flex-col sm:flex-row justify-between gap-x-3 gap-y-3 py-3">
+            <div class="flex min-w-0 gap-x-4">
+                <div class="min-w-0 flex-auto">
+                    <div class="flex items-center text-center">
+                        <p class="text-lg font-semibold leading-6 text-teal-500 mr-2 text-center">Plan d’actions</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <p class="mt-3 text-l leading-6 text-black">
+                            ● Implication des étudiants  dans la résolution des défis de la société, de la région et de la nation en organisant des forums et des journées sociétales permettant la sensibilisation bilatérale                           
+                            <br>
+                            ● Accompagnement des future diplômés aux différentes certifications reconnues à l’échelle international                            
+                            <br>
+                            ● Tisser des relations avec les anciens diplômés embauchés permettant une meilleure visibilité <br>   
+                            ● Assurer une formation générique qui suit l’évolution technologique <br>     
+                            ● Une meilleure implication des structures de recherche                                             
                         </p> 
                     </div>
                 </div>
